@@ -22,7 +22,10 @@ module.exports.register = async function(req, res){
             })
         }else{
             return res.json(400, {
-                message:"Patient already exists!"
+                message:"Patient already exists!",
+                data : {
+                    user : user
+                }
             });
         }
     }
