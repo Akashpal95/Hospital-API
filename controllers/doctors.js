@@ -4,13 +4,11 @@ const jwt = require('jsonwebtoken');
 module.exports.register = async function(req, res){
     console.log(req.body);
     try{
-        // if (req.body.password != req.body.confirm_password){
-        //     return res.redirect('back');
-        // }
-
+        //Check if user already exists
         let user = await Doctor.findOne({email: req.body.email}); 
 
         if (!user){
+            //Create user
             Doctor.create(req.body, function(err, user){
                 if(err){
                     console.log('Error in creating user while signing up'); 
@@ -49,7 +47,7 @@ module.exports.createSession =async function(req, res){
         return res.json(200, {
             message:"Sign in successful, here is your token, please keep it safe.",
             data: {
-                token: jwt.sign(user.toJSON(), 'hospitalEncryptionKey', {expiresIn: '1d'})
+                token: jwt.sign(user.toObject(), 'hospitalEncryptionKey', {expiresIn: '1d'})
             }
         });
     }catch(error){
