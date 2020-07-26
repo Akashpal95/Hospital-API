@@ -17,7 +17,10 @@ module.exports.register = async function(req, res){
                     });
                 }
                 return res.json(200, {
-                    message:"Patient registered Successfully!"
+                    message:"Patient registered Successfully!",
+                    data : {
+                        user:user
+                    }
                 });
             })
         }else{
