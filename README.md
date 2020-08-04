@@ -43,3 +43,39 @@ npm install
 6. input the command `npm start` on terminal
 
 7. Pat yourself in the back for making it so far!!
+
+# Unit Tests
+
+1.Unit Tests for route: /patients/register
+
+    a. it should not register a patient without phone number
+    b. it should not register a patient with a phone already registered
+    c. it should register a new patient when all mandatory details are present and phone number is unique
+    d. it should create a report successfully if status is valid and patient id is registered
+    
+2.Unit Tests for route: /patients/:id/create_report
+
+    a. it should not create a report if pateint id in url is not registered
+    b. it should not create a report if status code is missing
+    c. it should not create a report if status code is invalid
+    d. it should create a report successfully if status is valid and patient id is registered
+    
+3.Unit Tests for route: /patients/:id/all_reports
+
+    a.it should not return any reports if pateint id in url is not registered
+    b.it should return all the reports correspoding to the patient id in url
+    
+# Directory Structure
+The Directory strutcure follows a MVC design pattern with each folder serving a specific purpose making it easily maintainable as well as scalable.
+
+    /assets - Folder for static files
+
+    /config - Folder for all config files used for setting up the project.
+
+    /routes - Folder for all route files, correspoding to each URL the client may use
+
+    /models - Folder for all DB schema files
+
+    /controller - Folder for all the modules responsible for processing data, each file containing all the functions for the corresponding route
+
+    /test - Folder for all the unit tests
