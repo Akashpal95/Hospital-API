@@ -43,3 +43,11 @@ npm install
 6. input the command `npm start` on terminal
 
 7. Pat yourself in the back for making it so far!!
+
+# Unit testing
+1.Unit Tests for route: /patients/register
+
+    a.it should not register a patient without phone number
+    b.it should not register a patient with a phone already registered
+    c.it should register a new patient when all mandatory details are present and phone number is unique
+    d.it should create a report successfully if status is valid and patient id is registered
