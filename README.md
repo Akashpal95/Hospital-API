@@ -44,23 +44,23 @@ npm install
 
 7. Pat yourself in the back for making it so far!!
 
-## Unit testing
+# Unit Tests
 
-1. Unit Tests for route: /patients/register
+1.Unit Tests for route: /patients/register
 
-    a.it should not register a patient without phone number
-    b.it should not register a patient with a phone already registered
-    c.it should register a new patient when all mandatory details are present and phone number is unique
-    d.it should create a report successfully if status is valid and patient id is registered
+    a. it should not register a patient without phone number
+    b. it should not register a patient with a phone already registered
+    c. it should register a new patient when all mandatory details are present and phone number is unique
+    d. it should create a report successfully if status is valid and patient id is registered
     
-2. Unit Tests for route: /patients/:id/create_report
+2.Unit Tests for route: /patients/:id/create_report
 
-    a.it should not create a report if pateint id in url is not registered
-    b.it should not create a report if status code is missing
-    c.it should not create a report if status code is invalid
-    d.it should create a report successfully if status is valid and patient id is registered
+    a. it should not create a report if pateint id in url is not registered
+    b. it should not create a report if status code is missing
+    c. it should not create a report if status code is invalid
+    d. it should create a report successfully if status is valid and patient id is registered
     
-3. Unit Tests for route: /patients/:id/all_reports
+3.Unit Tests for route: /patients/:id/all_reports
 
     a.it should not return any reports if pateint id in url is not registered
     b.it should return all the reports correspoding to the patient id in url
