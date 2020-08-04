@@ -10,5 +10,5 @@ router.post('/register', passport.authenticate('jwt', {session:false}),patientCo
 router.post('/:id/create_report', passport.authenticate('jwt', {session:false}),patientController.createReport)
 
 //Show patient records
-router.post('/:id/all_reports', passport.authenticate('jwt', {session:false}), patientController.showAllReport)
+router.post('/:id/all_reports', patientController.showAllReport)
 module.exports = router;
